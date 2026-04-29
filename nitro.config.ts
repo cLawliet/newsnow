@@ -12,6 +12,7 @@ const nitroOption: Parameters<typeof viteNitro>[0] = {
     plugins: [RollopGlob()],
   },
   sourceMap: false,
+  renderer: false, // 26.04 HY 只加这一行！解决所有报错
   database: {
     default: {
       connector: "better-sqlite3",
