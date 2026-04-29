@@ -15,7 +15,6 @@
     "build": "npm run presource && vite build",
     "lint": "eslint",
     "presource": "tsx ./scripts/favicon.ts && tsx ./scripts/source.ts",
-    "build": "mkdir -p dist && echo '<!DOCTYPE html>' > dist/index.html && npm run presource && vite build",//26.04 HY
     "start": "node --env-file .env.server dist/output/server/index.mjs",
     "preview": "cross-env CF_PAGES=1 npm run build && wrangler pages dev dist/output/public",
     "deploy": "cross-env CF_PAGES=1 npm run build && wrangler pages deploy dist/output/public",

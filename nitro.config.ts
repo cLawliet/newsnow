@@ -12,6 +12,9 @@ const nitroOption: Parameters<typeof viteNitro>[0] = {
     plugins: [RollopGlob()],
   },
   sourceMap: false,
+  renderer: {
+    template: "./index.html",
+  },
   database: {
     default: {
       connector: "better-sqlite3",
