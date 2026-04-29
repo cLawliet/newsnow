@@ -17,11 +17,11 @@ function GoTop() {
   )
 }
 
-function Github() {
+{/* function Github() {
   return (
     <button type="button" title="Github" className="i-ph:github-logo-duotone btn" onClick={() => window.open(Homepage)} />
   )
-}
+} */}
 
 function Refresh() {
   const currentSources = useAtomValue(currentSourcesAtom)
@@ -59,9 +59,9 @@ export function Header() {
             </p>
           </span>
         </Link>
-        <a target="_blank" href={`${Homepage}/releases/tag/v${Version}`} className="btn text-sm ml-1 font-mono">
+        {/* <a target="_blank" href={`${Homepage}/releases/tag/v${Version}`} className="btn text-sm ml-1 font-mono">
           {`v${Version}`}
-        </a>
+        </a> */}
       </span>
       <span className="justify-self-center">
         <span className="hidden md:(inline-block)">
@@ -71,8 +71,7 @@ export function Header() {
       <span className="justify-self-end flex gap-2 items-center text-xl text-primary-600 dark:text-primary">
         <GoTop />
         <Refresh />
-        <Github />
-        <Menu />
+        {/* <Github /> */}        <Menu />
       </span>
     </>
   )
