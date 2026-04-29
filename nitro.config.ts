@@ -66,6 +66,6 @@ if (process.env.VERCEL) {
 }
 
 export default function () {
-  //return viteNitro(nitroOption)
-  return [] // 26.04 HY：这里替换掉原来的 viteNitro(nitroOption)
+  return viteNitro(nitroOption)
+  //return [] // 26.04 HY：这里替换掉原来的 viteNitro(nitroOption)
 }
