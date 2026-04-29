@@ -12,12 +12,6 @@ const nitroOption: Parameters<typeof viteNitro>[0] = {
     plugins: [RollopGlob()],
   },
   sourceMap: false,
-  
-  // 26.04 HY 强制使用根目录的 index.html，彻底绕过 dist 找不到的问题
-  renderer: {
-    template: "./index.html",
-  },
-  
   database: {
     default: {
       connector: "better-sqlite3",
@@ -72,5 +66,6 @@ if (process.env.VERCEL) {
 }
 
 export default function () {
-  return viteNitro(nitroOption)
+  //return viteNitro(nitroOption)
+  return [] // 26.04 HY：这里替换掉原来的 viteNitro(nitroOption)
 }
