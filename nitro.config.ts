@@ -12,7 +12,12 @@ const nitroOption: Parameters<typeof viteNitro>[0] = {
     plugins: [RollopGlob()],
   },
   sourceMap: false,
-  renderer: false, // 26.04 HY 只加这一行！解决所有报错
+  
+  // 26.04 HY 强制使用根目录的 index.html，彻底绕过 dist 找不到的问题
+  renderer: {
+    template: "./index.html",
+  },
+  
   database: {
     default: {
       connector: "better-sqlite3",
